@@ -36,12 +36,7 @@ class WelcomeScreen extends StatelessWidget {
               child: TextButton(
                   onPressed: (){}, child: Row(
                     children: [
-                      Text('skip', style: TextStyle(
-                color: Colors.black.withOpacity(.6),
-                fontWeight: FontWeight.w400,
-                fontSize: 20,
-
-              )),
+                      Text('skip', style: Theme.of(context).textTheme.headline5?.copyWith(fontWeight: FontWeight.bold)),
                       Icon(Icons.navigate_next),
                     ],
                   ), ),
