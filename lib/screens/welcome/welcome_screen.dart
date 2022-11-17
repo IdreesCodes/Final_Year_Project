@@ -1,7 +1,11 @@
 import 'package:final_year_project/constants.dart';
 import 'package:flutter/material.dart';
 
+import 'login_screen.dart';
+
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +38,9 @@ class WelcomeScreen extends StatelessWidget {
             ),
             FittedBox(
               child: TextButton(
-                  onPressed: (){}, child: Row(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+                  }, child: Row(
                     children: [
                       Text('skip', style: Theme.of(context).textTheme.headline5?.copyWith(fontWeight: FontWeight.bold)),
                       Icon(Icons.navigate_next),
